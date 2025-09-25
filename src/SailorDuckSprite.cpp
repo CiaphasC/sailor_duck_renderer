@@ -12,47 +12,47 @@ using sailor_duck::Color;
 using sailor_duck::ColorPalette;
 using sailor_duck::Sprite;
 
-constexpr int kSpriteWidth = 34;
+constexpr int kSpriteWidth = 35;
 constexpr int kSpriteHeight = 36;
 
-// Patron del pato marinero: 34x36 pixeles en notacion compacta.
+// Patron del pato marinero: 35x36 pixeles en notacion compacta.
 constexpr std::array<const char*, kSpriteHeight> kSpriteRows = {
-    "..................................",
-    ".................OOO..............",
-    "................OOOOO.............",
-    "...............OOHMHOO............",
-    ".............OOOHHMHHOOO..........",
-    "............OOHHHHMMHHHOO.........",
-    "...........OOHHHHPPPHMHHOO........",
-    "..........OOHHMppPPPPppHHOO.......",
-    ".........OOHMppPPPPPPPPppHOO......",
-    "........OOHMppPPPPPPPPPPppHOO.....",
-    ".....OOWWWwOHHppPPPEEEEPpPPppHOO..",
-    "....OOWwwwwOHHpPPYYYYyyyyPPppHOO..",
-    "....OOWwwwOHHppPPYYYYyyyyyyPPpHOO.",
-    ".....OWwwOHHppPPYYYYyyyyyyPPpHOO..",
-    "......OwOOHHppPPYYYYyyyyPPppHHO...",
-    "......OOHHppPPPPPPPPPPppHHO.......",
-    "......OHHppHHHHHHHHHHppHHO........",
-    ".......OHppHHHHHHHHHHppHHO........",
-    ".......OOHHHHHHHHHHHHHHOO.........",
-    "........OOHHHHHHHHHHHHOOO.........",
-    "........OOHHHHHHHHHHHHOOO.........",
-    ".......OOHHHHHHHHHHHHHHOO.........",
-    "......OOHHHHHHHHHHHHHHHOO.........",
-    "......OHHHHHHHHHHHHHHHHOOO........",
-    "......OHHHHBBBBMMMMBBHHHOO........",
-    "......OHHHBBBBBRRRRBBHHOO.........",
-    "......OHHHBBBBrrrrrBBHOO..........",
-    ".......OHHBBBBrrrrrBBHOO..........",
-    ".......OHHBBBBrrrrrBBHOO..........",
-    "........OHBBBRRRRRRBHOO...........",
-    "........OHHBBRrrrrRBHOO...........",
-    ".........OHBBRrrrrRBHO............",
-    ".........OHHBRrrrrRBOO............",
-    "..........OOBfffffBBO.............",
-    "...........OOFFFFFGOO.............",
-    "............OFFFFFGO.............."
+    "..................BM..............",
+    ".................OwMBBMM...........",
+    "..................OrHHHHOB........",
+    "..................OBBHHHHR........",
+    "................HOORRROOMBM.......",
+    "................MOOrppOrPRO.......",
+    ".......wGG......MBrOOOBOGrO.......",
+    "....HwwGyyG.HyyHBHOpBrBOprOw......",
+    "....RHHBGGG.GyYyYYYYyOGyYOOpOOO...",
+    "...OMHBBOG...GYYyYYYYYYfGGOrOrpO..",
+    "..OHHOBrHO...GYYYYYYYYYGfGpOOrrpH.",
+    ".RHwRBOHBO...WGGyyyyyyGFGOMOOOprH.",
+    ".RHHRBOBO.......GGGGGGFGBB.OO.OrH.",
+    ".GRBRORRBO......HGGGGfGBrw.OO.OpR.",
+    "OGGOOBBBHHr......OBBBBBBO..Op.OPPO",
+    "GGGGOBBHHHr......OBBBBBO..OPp..OGr",
+    "RGGR.RRMHHwBB..BBMHHMBRR..OrO..WOr",
+    ".M.....rHHHHBOOHHHHHHBR...OrO....O",
+    "OO.....MBHHHBBHHRHHHHBR....OrO....",
+    "RrOOB...RRBBBBMrBGMHwBrMM...ppr...",
+    ".RRORO.wOBBBBBORGGGHBOBBBB........",
+    "..OROBOrHHHHHrOGGGGRBOBBBr........",
+    "..OOrOBHHHMORrOOOOORBORBBBO.......",
+    "..HOBrOrrOrOMMHOrrHwOORHwBO.......",
+    "...ORHHHHHHHHHHOBHHHBBHHHMO.......",
+    "...wRHHHHHHHHHHOOOHHBBHHHR........",
+    "....RBHHHHHHHHHOBHHHBBHHHB........",
+    "....RBBGGHHHHHHOrBHMBBBOO.........",
+    "....RGFYFGHHHHHGGGrrrOM...........",
+    "....PYYYfGBBBBBGGGGGyyB...........",
+    "....yYYYGBBBBBBBOGGyyyG...........",
+    "...PyYFGRBBBBBBRRRRfyyfG..........",
+    "..GYFfG..OOOOOO....GyyG...........",
+    ".fYfffG...........GfffB...........",
+    "MFYYYYGw.........GFYYYyGM.........",
+    "WGGGGGG..........GGGGGGGG.........",
 };
 
 constexpr Color make_color(std::uint8_t r, std::uint8_t g, std::uint8_t b) {
@@ -65,24 +65,33 @@ namespace sailor_duck {
 
 ColorPalette build_sailor_duck_palette() {
     ColorPalette palette;
+    
+    // Colores base del pato marinero
     palette.add_color('O', make_color(54, 23, 84));   // Perfil violeta oscuro.
     palette.add_color('H', make_color(227, 242, 255)); // Cuerpo e indumentaria iluminados.
     palette.add_color('M', make_color(185, 211, 248)); // Azul medio para volúmenes.
 
+    // Pañuelo
     palette.add_color('P', make_color(198, 124, 240)); // Pañuelo púrpura con luz.
     palette.add_color('p', make_color(132, 74, 200));  // Pañuelo en sombra.
 
+    // Guantes
     palette.add_color('W', make_color(248, 251, 255)); // Guante brillo.
     palette.add_color('w', make_color(206, 222, 255)); // Guante sombra.
 
+    // Ojos
     palette.add_color('E', make_color(255, 255, 255)); // Ojo.
+
+    // Pico
     palette.add_color('Y', make_color(249, 186, 74));  // Pico iluminado.
     palette.add_color('y', make_color(224, 135, 55));  // Pico sombra.
 
+    // Cinturón y ropa
     palette.add_color('B', make_color(143, 162, 230)); // Cinturón y faldón.
     palette.add_color('R', make_color(98, 112, 189));  // Cuerda iluminada.
     palette.add_color('r', make_color(58, 68, 146));   // Cuerda en sombra.
 
+    // Patas
     palette.add_color('F', make_color(245, 150, 66));  // Pata iluminada.
     palette.add_color('f', make_color(209, 103, 40));  // Pata en sombra.
     palette.add_color('G', make_color(120, 67, 36));   // Suela y borde inferior.
