@@ -1,0 +1,74 @@
+# Archivos de compilación
+*.exe
+*.obj
+*.o
+*.lib
+*.a
+*.dll
+*.so
+*.dylib
+
+# Directorios de build
+build/
+bin/
+obj/
+cmake-build-*/
+out/
+
+# Archivos de CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Archivos de Visual Studio / MSBuild
+*.vcxproj.filters
+*.vcxproj.user
+*.sln.docstates
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Archivos de Code::Blocks
+*.cbp
+*.layout
+*.depend
+
+# Archivos de depuración
+*.pdb
+*.ilk
+*.map
+*.exp
+
+# Archivos temporales
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs de compilación
+*.log
+build_error.log
+
+# Archivos de prueba
+test_*.exe
+*_test.exe
+
+# Archivos de backup
+*.bak
+*.backup
