@@ -1,0 +1,2 @@
+[33mf1d034b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Update sprite dimensions and pattern: Fix sprite width to 35 pixels and update sailor duck sprite pattern
+[33m822db7d[m Initial commit: Sailor Duck Renderer C++ project with miniwin

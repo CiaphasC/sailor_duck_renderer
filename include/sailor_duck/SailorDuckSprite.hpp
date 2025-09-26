@@ -6,7 +6,7 @@
 
 namespace sailor_duck {
 
-// Fabrica la paleta especifica del pato marinero.
+// Fabrica la paleta de colores para el sprite.
 ColorPalette build_sailor_duck_palette();
 
 // Construye el sprite comprimido en memoria con la pose completa.

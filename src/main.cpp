@@ -8,14 +8,14 @@ int main() {
     constexpr int kPixelSize = 12;
     constexpr int kMargin = 48;
 
-    // Cargamos la paleta y la plantilla de pixeles en memoria dinamica controlada.
+    // Cargamos la paleta de colores y el sprite en memoria dinamica controlada.
     auto palette = sailor_duck::build_sailor_duck_palette();
     auto sprite = sailor_duck::build_sailor_duck_sprite();
 
     const int canvas_width = sprite.width() * kPixelSize + kMargin * 2;
     const int canvas_height = sprite.height() * kPixelSize + kMargin * 2;
 
-    // Ajustamos la ventana con un margen para que el sprite respire visualmente.
+    // Ajustamos la ventana con un margen para mostrar el sprite con espacio visual.
     vredimensiona(canvas_width, canvas_height);
     borra();
 

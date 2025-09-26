@@ -1,6 +1,6 @@
 # Sailor Duck Renderer
 
-Proyecto C++ basado en MiniWin que dibuja un pato pirata en estilo pixel art empleando memoria dinamica controlada y aritmetica con punteros.
+Proyecto C++ basado en MiniWin que renderiza pixel art empleando memoria dinamica controlada y aritmetica con punteros.
 
 ## Estructura principal
 
